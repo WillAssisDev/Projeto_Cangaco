@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="97b84a4a-3cc8-4115-80e1-2c186c756c41" name="Default Changelist" comment="Finalizei tokenização e normalização" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iQ4rWR7ArvXTd5AhpJ2byYtdH7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\conjunto_dados\utilidades\pre_processamento" />
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\conjunto_dados\utilidades\captura" />
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\dataset\utilidades" />
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\dataset" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.rascunhos">
+    <configuration name="api_rate_limit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_rate_limit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="chaves_busca" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/chaves_busca.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="corpus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\dataset\utilidades\corpus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rascunhos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rascunhos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maria_bonita/dataset/teste.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.rascunhos" />
+        <item itemvalue="Python.chaves_busca" />
+        <item itemvalue="Python.api_rate_limit" />
+        <item itemvalue="Python.corpus" />
+        <item itemvalue="Python.teste" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97b84a4a-3cc8-4115-80e1-2c186c756c41" name="Default Changelist" comment="" />
+      <created>1601826680242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601826680242</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Finalizei tokenização e normalização">
+      <created>1606430812477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606430812477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finalizei tokenização e normalização" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizei tokenização e normalização" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1042" y="341" key="#xdebugger.evaluate" timestamp="1606252153668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1042" y="341" key="#xdebugger.evaluate/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606252153668" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1606047600519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606047600519" />
+    <state width="1899" height="259" key="GridCell.Tab.0.bottom" timestamp="1606436536619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="259" key="GridCell.Tab.0.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
+    <state width="1899" height="259" key="GridCell.Tab.0.center" timestamp="1606436536619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="259" key="GridCell.Tab.0.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
+    <state width="1899" height="259" key="GridCell.Tab.0.left" timestamp="1606436536619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="259" key="GridCell.Tab.0.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
+    <state width="1899" height="259" key="GridCell.Tab.0.right" timestamp="1606436536619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="259" key="GridCell.Tab.0.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1606430230419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1606430230419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1606430230419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1606430230419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
+    <state x="469" y="164" key="SettingsEditor" timestamp="1606435123018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="469" y="164" key="SettingsEditor/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606435123018" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1606430822541">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430822540" />
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603359543398">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1603359543398" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1602173724121">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1602173724121" />
+    <state x="666" y="119" width="587" height="801" key="find.popup" timestamp="1606432962714">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="119" width="587" height="801" key="find.popup/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606432962714" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1603361216000">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1603361216000" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606428872217">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606428872217" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/novas_variaveis.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
