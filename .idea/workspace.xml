@@ -15,17 +15,16 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b84a4a-3cc8-4115-80e1-2c186c756c41" name="Default Changelist" comment="Finalizei tokenização e normalização" />
+    <list default="true" id="97b84a4a-3cc8-4115-80e1-2c186c756c41" name="Default Changelist" comment="Finalizei tokenização e normalização">
+      <change afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/normalizacao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/chaves_busca.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/chaves_busca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,38 +222,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606047600519" />
-    <state width="1899" height="259" key="GridCell.Tab.0.bottom" timestamp="1606436536619">
+    <state width="1899" height="259" key="GridCell.Tab.0.bottom" timestamp="1606609248565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="259" key="GridCell.Tab.0.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
-    <state width="1899" height="259" key="GridCell.Tab.0.center" timestamp="1606436536619">
+    <state width="1899" height="259" key="GridCell.Tab.0.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606609248565" />
+    <state width="1899" height="259" key="GridCell.Tab.0.center" timestamp="1606609248565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="259" key="GridCell.Tab.0.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
-    <state width="1899" height="259" key="GridCell.Tab.0.left" timestamp="1606436536619">
+    <state width="1899" height="259" key="GridCell.Tab.0.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606609248565" />
+    <state width="1899" height="259" key="GridCell.Tab.0.left" timestamp="1606609248565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="259" key="GridCell.Tab.0.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
-    <state width="1899" height="259" key="GridCell.Tab.0.right" timestamp="1606436536619">
+    <state width="1899" height="259" key="GridCell.Tab.0.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606609248565" />
+    <state width="1899" height="259" key="GridCell.Tab.0.right" timestamp="1606609248565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="259" key="GridCell.Tab.0.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606436536619" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1606430230419">
+    <state width="1899" height="259" key="GridCell.Tab.0.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606609248565" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1606608869221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1606430230419">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606608869221" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1606608869221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1606430230419">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606608869221" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1606608869221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1606430230419">
+    <state width="1899" height="348" key="GridCell.Tab.1.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606608869221" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1606608869221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606430230419" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606608869221" />
     <state x="469" y="164" key="SettingsEditor" timestamp="1606435123018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -288,8 +287,38 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/novas_variaveis.py</url>
-          <line>100</line>
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/chaves_busca.py</url>
+          <line>35</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

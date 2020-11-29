@@ -36,20 +36,6 @@ class Chave_Busca:
       if isinstance(chave_busca, Chave_Busca) and chave_busca.rotulo == rotulo_alvo:
         return chave_busca
 
-  def normalizar_chave(self, tweet_texto:str):
-    """Função que recebe um tweet com problemas na grafia da(s) chave(s) de busca e o normaliza.
-
-    :param tweet_texto: o tweet publicado
-    :return: o tweet com a(s) chave(s) de busca normalizada(s)
-    """
-    for normalizador in self.__lista_normalizacao:
-      chave_normal = normalizador[0]
-      a_substituir = normalizador[1]
-
-      for substituido in a_substituir:
-        tweet_texto = tweet_texto.replace(substituido, chave_normal)
-
-    return tweet_texto
 
 # CONSTANTES
 
@@ -145,7 +131,7 @@ RACISMO = Chave_Busca(
                 'pretas', 'prtinhas', 'crioulas', 'criolas', 'escravas', 'escravinhas', 'domésticas', 'negas', 'neguinhas', 'escuras', 'escurinhas',
                 'preto', 'pretinho', 'crioulo', 'criolo', 'escravo', 'éscravinho', 'doméstico', 'nego', 'neguinho', 'escuro', 'escurinho',
                 'pretos', 'pretinhos', 'crioulos', 'criolos', 'escravos', 'escravinhos', 'domésticos', 'negos', 'neguinhos', 'escuros', 'escurinhos'],
-  lista_normalizacao=[]#[('', ['']), ('', [''])]
+  lista_normalizacao=[]
 )
 
 
