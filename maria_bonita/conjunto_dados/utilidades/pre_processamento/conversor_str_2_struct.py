@@ -1,11 +1,11 @@
-import maria_bonita.conjunto_dados.utilidades.tratamento_erros as te
+import utilidades.tratamento_erros as te
 
 # CONSTANTES
-CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_struct.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_struct.'
 
 
 def converter_str_em_list_dict(string:str):
-  """Método que converte uma string em uma lista de dicionários.
+  """Função que converte uma string em uma lista de dicionários.
 
   :param string: lista de dicionários convertida em string no momento da exportação
   :return: a lista de dicionários originalmente estruturada
@@ -20,11 +20,11 @@ def converter_str_em_list_dict(string:str):
     return lista
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + '__converter_str_em_list_dict')
+    te.base_exception(erro, _CAMINHO_MODULO + '__converter_str_em_list_dict')
 
 
 def converter_str_em_dict(string:str):
-  """Método que converte uma string em dicionário.
+  """Função que converte uma string em dicionário.
 
   :param string: dicionário convertido em string no momento da exportação
   :return: o dicionário originalmente estruturado
@@ -38,7 +38,7 @@ def converter_str_em_dict(string:str):
     return dicionario
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + '__converter_str_em_dict')
+    te.base_exception(erro, _CAMINHO_MODULO + '__converter_str_em_dict')
 
 
 __doc__ = """Módulo com recursos para conversão de strings nas estruturas de dados originais do conjunto_dados, antes da

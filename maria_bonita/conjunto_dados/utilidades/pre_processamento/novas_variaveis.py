@@ -1,13 +1,13 @@
 from pandas import isna
-import maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados as ds
-import maria_bonita.conjunto_dados.utilidades.tratamento_erros as te
+import utilidades.tratamento_erros as te
 import maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_struct as cs2s
 import maria_bonita.conjunto_dados.utilidades.pre_processamento.tokenizacao as tk
-import maria_bonita.conjunto_dados.utilidades.captura.chaves_busca as cb
+import maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados as fcd
 
 
 # CONSTANTES
-CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.novas_variaveis.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.novas_variaveis.'
+COM_STOPWORDS = True
 
 
 def __mapear_relacionamento(numero_relacionamento:int):
@@ -18,19 +18,19 @@ def __mapear_relacionamento(numero_relacionamento:int):
   """
   try:
     if not isinstance(numero_relacionamento, int): numero_relacionamento = int(numero_relacionamento)
-    if numero_relacionamento == ds.INDEFINIDO:
+    if numero_relacionamento == fcd.INDEFINIDO:
       return 'indefinido'
-    elif numero_relacionamento == ds.NAO_RELACIONADOS:
+    elif numero_relacionamento == fcd.NAO_RELACIONADOS:
       return 'não relacionados'
-    elif numero_relacionamento == ds.AMIZADE:
+    elif numero_relacionamento == fcd.AMIZADE:
       return 'amizade'
-    elif numero_relacionamento == ds.SEGUINDO:
+    elif numero_relacionamento == fcd.SEGUINDO:
       return 'seguindo'
-    elif numero_relacionamento == ds.SEGUIDO:
+    elif numero_relacionamento == fcd.SEGUIDO:
       return 'seguido'
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + '__mapear_relacionamento')
+    te.base_exception(erro, _CAMINHO_MODULO + '__mapear_relacionamento')
 
 
 def relacionamento_com_mencionados(mencionados:list):
@@ -56,7 +56,7 @@ def relacionamento_com_mencionados(mencionados:list):
     return relacionamento_com_mencionados if len(relacionamento_com_mencionados) else ''
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'relacionamento_com_mencionados')
+    te.base_exception(erro, _CAMINHO_MODULO + 'relacionamento_com_mencionados')
 
 
 def relacionamento_com_respondido(em_resposta:dict):
@@ -79,15 +79,16 @@ def relacionamento_com_respondido(em_resposta:dict):
     return relacionamento_com_respondido
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'relacionamento_com_respondido')
+    te.base_exception(erro, _CAMINHO_MODULO + 'relacionamento_com_respondido')
 
 
-def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list):
+def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, com_stopwords:bool=COM_STOPWORDS):
   """ Função que recebe um tweet cru e lhe aplica os tratamentos necessários para o posterior processamento.
 
   :param tweet_texto: o tweet não tratado
   :param chaves_busca: lista que contém os objetos das chaves de busca e respectivos rótulos
   :param usuarios_mencionados: lista de dicionários de usuários mencionados no tweet
+  :param com_stopwords: parâmetro booleano que indica se as stopwords devem ou não serem mantidas
   :return: tweet tratado: stopwords e não alfanuméricos removidas, descapitalização e menções, números e emojis normalizados
   """
   try:
@@ -98,11 +99,40 @@ def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list):
       if tipo_mencionados == str: mencionados = cs2s.converter_str_em_list_dict(mencionados)
       lista_screen_names = [mencao['screen_name'] for mencao in mencionados]
 
-      return tk.tokenizar(tweet_texto, chaves_busca, lista_screen_names)
-    return tk.tokenizar(tweet_texto, chaves_busca, [])
+      return tk.tokenizar(tweet_texto, chaves_busca, lista_screen_names, com_stopwords)
+    return tk.tokenizar(tweet_texto, chaves_busca, [], com_stopwords)
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'tokenizar')
+    te.base_exception(erro, _CAMINHO_MODULO + 'tokenizar')
+
+
+def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_crime=None, com_stopwords:bool=COM_STOPWORDS):
+  """Função que recebe um dicionário de tweet e cria novos atributos.
+
+  :param dicionario_tweet: o dicionário de um tweet
+  :param chaves_busca: lista de objetos chave de busca
+  :param possivel_crime: valor para indicador ou não tweet criminoso
+  :param com_stopwords: parâmetro booleano que indica se as stopwords devem ou não serem mantidas
+  :return: o dicionário do tweet, com as novas variáveis incorporadas
+  """
+  try:
+    dicionario_tweet['relacionamento_com_mencionados'] = relacionamento_com_mencionados(dicionario_tweet['tweet_usuarios_mencionados'])
+
+    dicionario_tweet['relacionamento_com_respondido'] = relacionamento_com_respondido(dicionario_tweet['tweet_em_resposta'])
+
+    dicionario_tweet['texto_original'] = dicionario_tweet['tweet_texto']
+
+    dicionario_tweet['tokens'] = tokenizar(tweet_texto=dicionario_tweet['texto_original'],
+                                           chaves_busca=chaves_busca,
+                                           mencionados=dicionario_tweet['tweet_usuarios_mencionados'],
+                                           com_stopwords=com_stopwords)
+
+    dicionario_tweet['possivel_crime'] = possivel_crime
+
+    return dicionario_tweet
+
+  except BaseException as erro:
+    te.base_exception(erro, _CAMINHO_MODULO + 'novas_variaveis')
 
 
 __doc__ = """Módulo com recursos para criação de novas variáveis, somente baseadas em um conjunto de dados já criado,

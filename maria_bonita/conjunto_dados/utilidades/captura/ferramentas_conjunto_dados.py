@@ -1,18 +1,19 @@
 from pandas import isna
 from random import choice
-import maria_bonita.conjunto_dados.utilidades.captura.APIPersonalizada as ap
+import maria_bonita.conjunto_dados.utilidades.captura.API_Personalizada as ap
 import maria_bonita.conjunto_dados.utilidades.captura.chaves_busca as chaves_busca
-import maria_bonita.conjunto_dados.utilidades.tratamento_erros as te
+import utilidades.tratamento_erros as te
 import maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_struct as cs2s
 
 
 # CONSTANTES
-CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados.'
 
 # parametrização
-QUANTIDADE_TWEETS = 9999
+QUANTIDADE_TWEETS = 2000
 COM_RETWEETS = False
-IDIOMAS_PADRAO = ['pt']
+IDIOMA_PADRAO = 'pt'
+IDIOMAS_PADRAO = [IDIOMA_PADRAO]
 DIRETORIO_SAIDA = './saida/'
 FORMATO_SAIDA = '.csv'
 
@@ -28,10 +29,10 @@ def parametros(chaves_busca:list=(chaves_busca.LISTA_GERAL), quantidade_tweets:i
                com_retweets:bool=COM_RETWEETS, idiomas:list=IDIOMAS_PADRAO):
   """Função para facilitar a parametrização do conjunto de dados sendo gerado.
 
-  :param chaves_busca: objeto que contém as chaves de busca e os respectivos rótulos
-  :param quantidade_tweets: o número que indica a quantidades de tweets que deverão ser capturados
-  :param com_retweets: indica se, no streaming, deverão ser capturados retweets
-  :param idiomas: os idiomas monitorados no streaming
+  :param chaves_busca: lista de objetos chave de busca
+  :param quantidade_tweets: inteiro que indica a quantidades de tweets que deverão ser capturados
+  :param com_retweets: booleano que indica se, no streaming, deverão ser capturados retweets
+  :param idiomas: lista dos idiomas monitorados no streaming
   :return: tupla com os parâmetros configurados, respectivamente: chaves_selecionadas, quantidade_tweets, com_retweets, idiomas, caminho_saida
   """
   try:
@@ -49,12 +50,12 @@ def parametros(chaves_busca:list=(chaves_busca.LISTA_GERAL), quantidade_tweets:i
     return chaves_selecionadas, quantidade_tweets, com_retweets, idiomas, caminho_saida
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'parametros')
+    te.base_exception(erro, _CAMINHO_MODULO + 'parametros')
 
 
 def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str):
   """Função privada para estabelecer o relacionamento entre o usuário origem e o usuário alvo. Se a propriedade PRODUCAO
-  do objeto API for TRUE, é realizada conexão no end-point do twitter para estabelecer o relacionmaneto. Se a
+  do objeto API for TRUE, é realizada conexão no end-point do Twitter para estabelecer o relacionmaneto. Se a
   propriedade for FALSE, é realizada uma simulação através do módulo RANDOM.
 
   :param API: a instância da API criada
@@ -90,8 +91,7 @@ def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str
       else:
         relacionamento = choice([AMIZADE, SEGUINDO, SEGUIDO, NAO_RELACIONADOS])
 
-      recurso_application.contabiliza_acesso()
-      recurso_friendship_show.contabiliza_acesso()
+      API.contabiliza_acessos_recursos([ap.Application, ap.FriendshipShow])
 
       print("\nChamadas API:", API.status_acessos)
 
@@ -101,13 +101,12 @@ def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str
     return API, relacionamento
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + '__relacionar_usuarios')
-    recurso_application.contabiliza_acesso()
-    recurso_friendship_show.contabiliza_acesso()
+    te.base_exception(erro, _CAMINHO_MODULO + '__relacionar_usuarios')
+    API.contabiliza_acessos_recursos([ap.Application, ap.FriendshipShow])
     return API, relacionamento
 
   except ConnectionError as erro:
-    te.connection_error(erro, CAMINHO_MODULO + '__relacionar_usuarios', API)
+    te.connection_error(erro, _CAMINHO_MODULO + '__relacionar_usuarios')
     return ap.API(), relacionamento
 
 
@@ -131,7 +130,7 @@ def relacionamento_com_mencionados(API:ap.API, usuario_id_origem:str, mencionado
     return mencionados
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'relacionamento_com_mencionados')
+    te.base_exception(erro, _CAMINHO_MODULO + 'relacionamento_com_mencionados')
     return mencionados
 
 
@@ -168,7 +167,7 @@ def relacionamento_com_respondido(API:ap.API, usuario_id_origem:str, mencionados
     return em_resposta
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'relacionamento_com_respondido')
+    te.base_exception(erro, _CAMINHO_MODULO + 'relacionamento_com_respondido')
     em_resposta['relacionamento'] = INDEFINIDO
     return em_resposta
 

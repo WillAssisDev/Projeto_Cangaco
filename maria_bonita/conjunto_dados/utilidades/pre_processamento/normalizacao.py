@@ -1,11 +1,11 @@
 import regex as re
-import maria_bonita.conjunto_dados.utilidades.tratamento_erros as te
-from maria_bonita.conjunto_dados.utilidades.captura.info_tweet import SEP_DEMOJI
+import utilidades.tratamento_erros as te
+from maria_bonita.conjunto_dados.utilidades.captura.atributos_tweet import SEP_DEMOJI
 import maria_bonita.conjunto_dados.utilidades.captura.chaves_busca as cb
 
 
 # CONSTANTES
-CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.normalizacao.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.normalizacao.'
 
 
 def chaves_busca(tweet_texto:str, chaves_busca:list):
@@ -13,7 +13,7 @@ def chaves_busca(tweet_texto:str, chaves_busca:list):
 
   :param tweet_texto: o texto publicado sendo processado
   :param chaves_busca: lista que contém os objetos das chaves de busca e respectivos rótulos
-  :return:
+  :return: o tweet_texto, com as chaves de busca normalizadas
   """
   try:
     for chave in chaves_busca:
@@ -26,15 +26,15 @@ def chaves_busca(tweet_texto:str, chaves_busca:list):
     return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'chaves_busca')
+    te.base_exception(erro, _CAMINHO_MODULO + 'chaves_busca')
 
 
 def emoji(tweet_texto:str, sep:str=SEP_DEMOJI):
-  """Função que reconhece e normaliza emojis processados pela biblioteca demoji.
+  """Função que reconhece e normaliza emojis processados pela biblioteca demoji, já em linguagem natural.
 
   :param tweet_texto: o texto publicado sendo processado
   :param sep: deve ser o mesmo separador de emojis utilizado na captura dos tweets
-  :return: o tweet com da remoção do SEP e capitalização
+  :return: o tweet_texto, com a remoção do SEP e capitalização dos emojis já em linguagem natural
   """
   try:
     if SEP_DEMOJI in tweet_texto:
@@ -52,14 +52,14 @@ def emoji(tweet_texto:str, sep:str=SEP_DEMOJI):
     return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'emoji')
+    te.base_exception(erro, _CAMINHO_MODULO + 'emoji')
 
 
 def internetes(tweet_texto:str):
   """Função que reconhece expressões do internetes e as normaliza.
 
   :param tweet_texto: o texto publicado sendo processado
-  :return: o tweet com expressões do internetes normalizadas
+  :return: o tweet_texto, com expressões do internetes normalizadas
   """
   try:
     lista_internetes = [
@@ -88,7 +88,7 @@ def internetes(tweet_texto:str):
       ('graças a deus é sexta-feira', ['tgif']), ('linha do tempo', ['tl']), ('você', ['cê', 'ce', 'vc']),
       ('vocês', ['cês', 'ces', 'cêis', 'ceis', 'vcs']), ('verdade', ['vd', 'vdd']), ('vontade', ['vntd']),
       ('vai se foder', ['vsf']), ('vai tomar no cu', ['vtnc']), ('que diabos', ['wtf']), ('beijos e abraços', ['xoxo']),
-      ('você só vive uma vez', ['yolo']), ('whats app', ['zap', 'zapzap'])
+      ('você só vive uma vez', ['yolo']), ('whats app', ['zap', 'zapzap']), ('puta que pariu', ['pqp', 'pqpp', 'pqppp'])
     ]
 
     for substituto, expressoes in lista_internetes:
@@ -99,25 +99,26 @@ def internetes(tweet_texto:str):
     return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'risadas')
+    te.base_exception(erro, _CAMINHO_MODULO + 'internetes')
 
 
-def usuarios_mencionados(tokens:str, mencionados:list, resultado=' MENÇÃO '):
+def usuarios_mencionados(tweet_texto:str, mencionados:list, substituto=' MENÇÃO '):
   """Função que reconhece e normaliza os usuários mencionados em um tweet.
 
-  :param tokens: lista de fatias processadas de um conjunto de caracteres
-  :param mencionados: lista com screen_names de usuários mencionados no tweet
-  :param resultado: tweet resultante da substituição dos usuários mencionados pelo valor de RESULTADO
-  :return:
+  :param tweet_texto: o texto publicado sendo processado
+  :param mencionados: lista de dicionários de com infomações dos usuários mencionados no tweet
+  :param resultado: a expressão normalizadora, utilizada para substituir usuários mencionados identificados
+  :return: tweet_texto resultante da substituição dos usuários mencionados pelo valor de RESULTADO
   """
   try:
-    lista_tokens = []
-    for token in tokens:
-      lista_tokens.append(token) if token not in mencionados else lista_tokens.append(resultado)
-    return lista_tokens
+    for mencionado in mencionados:
+      usuario = '@' + mencionado.lower()
+      tweet_texto = tweet_texto.replace(usuario, substituto)
+
+    return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'usuarios_mencionados')
+    te.base_exception(erro, _CAMINHO_MODULO + 'usuarios_mencionados')
 
 
 def numeros(token:str):
@@ -134,18 +135,19 @@ def numeros(token:str):
       return token
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'numeros')
+    te.base_exception(erro, _CAMINHO_MODULO + 'numeros')
 
 
 def risadas(tweet_texto:str, substituto=' RISADA '):
   """Função que identifica no tweet diferentes risadas e as normaliza.
 
   :param tweet_texto: o texto publicado sendo processado
-  :return: o tweet com as risadas normalizadas
+  :param substituto: a expressão normalizadora, utilizada para substituir as risadas indentificadas
+  :return: o tweet_texto, com as risadas normalizadas
   """
   try:
     lista_regex = [r'(?<=\s|^)rs[rs]{1,}', r'(?<=\s|^)ha[ha]{2,}', r'(?<=\s|^)he[he]{2,}', r'(?<=\s|^)hi[hi]{2,}',
-                   r'(?<=\s|^)kk[k]*', r'(?<=\s|^)[hua]{3}[hua]{2,}', r'(?<=\s|^)[hue]{3}[hue]{2,}',
+                   r'(?<=\s|^)kk[k]*', r'(?<=\s|^)[ka]{4,}', r'(?<=\s|^)[hua]{3}[hua]{2,}', r'(?<=\s|^)[hue]{3}[hue]{2,}',
                    r'(?<=\s|^)[huae]{3,4}[huae]{2,}']
 
     for regex in lista_regex:
@@ -154,14 +156,14 @@ def risadas(tweet_texto:str, substituto=' RISADA '):
     return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'risadas')
+    te.base_exception(erro, _CAMINHO_MODULO + 'risadas')
 
 
 def simbolos_com_alfanumericos(tweet_texto:str):
   """Função que identifica no tweet símbolos representado com caracteres alfanuméricos e os converte em linguagem natural.
 
   :param tweet_texto: o texto publicado sendo processado
-  :return: o tweet com os símbolos traduzidos em linguagem natural
+  :return: o tweet_texto, com os símbolos traduzidos em linguagem natural
   """
   try:
     lista_simbolos = [
@@ -176,14 +178,14 @@ def simbolos_com_alfanumericos(tweet_texto:str):
     return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'simbolos_com_alfanumericos')
+    te.base_exception(erro, _CAMINHO_MODULO + 'simbolos_com_alfanumericos')
 
 
 def vogais_soltas(tweet_texto:str):
   """Função que identifica no tweet expressões vogais "soltas" do internetês e as normaliza.
 
   :param tweet_texto: o texto publicado sendo processado
-  :return: o tweet com as vogais soltas normalizadas
+  :return: o tweet_texto, com as vogais soltas normalizadas
   """
   try:
     vogais = ['a', 'e', 'i', 'o', 'u']
@@ -195,7 +197,7 @@ def vogais_soltas(tweet_texto:str):
     return tweet_texto
 
   except BaseException as erro:
-    te.base_exception(erro, CAMINHO_MODULO + 'vogais_soltas')
+    te.base_exception(erro, _CAMINHO_MODULO + 'vogais_soltas')
 
 
 __doc__ = """Módulo com recursos para efetuar normalizar o corpus textual e otimizar a precisão do modelo."""

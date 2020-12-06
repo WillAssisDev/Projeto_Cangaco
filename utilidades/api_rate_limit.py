@@ -1,5 +1,5 @@
 import tweepy as tw
-from autenticacao import autenticar
+from utilidades.autenticacao import autenticar
 
 
 api = tw.API(autenticar())
