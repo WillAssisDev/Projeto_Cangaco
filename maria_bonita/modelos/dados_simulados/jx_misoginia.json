@@ -1,0 +1,154 @@
+{
+  "plataforma": "JV",
+  "rotulo": "misoginia",
+  "tweets": {
+    "singular": [
+      {
+        "texto": "Feminazi desse jeito, @fulana vai ficar pra tia",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A @fulana se veste como biscate, fica bêbada, provoca e culpa é do cara.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Uma mulher que se preza não se veste como @fulana, igual uma prostituta",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Essas feminazi são tudo porcas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Minha ex é louca",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Minha ex é desequilibrada",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana se veste assim e não quer ser chamada de puta",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mulher assim como @fulana nem pra empregada serve. Sabe nem cozinhar.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana é nervosinha...deve ser mal amada",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana é nervosinha...deve ser mal comida",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Vish...lá vem a chefe louca!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana na festa estava louquinha, dando mole...",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      }
+    ],
+    "plural": [
+      {
+        "texto": "Feminazis desse jeito, @fulana @ciclana vão ficar pra tias",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A @fulana @ciclana se vestem como biscates, ficam bêbadas, provocam e culpa é do caras.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Umas mulheres que se prezam não se vestem como @fulana @ciclana, igual umas prostitutas",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Essas feminazis são tudo porcas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Minhas ex são loucas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Minhas ex são desequilibradas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana se vestem assim e não querem ser chamadas de putas",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mulheres assim como @fulana @ciclana nem pra empregadas servem. Sabem nem cozinhar.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana são nervosinhas... devem ser mal amadas",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana são nervosinhas... devem ser mal comidas",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Vish... lá vem as chefes loucas!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana na festa estavam louquinhas, dando mole...",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      }
+    ]
+  }
+}

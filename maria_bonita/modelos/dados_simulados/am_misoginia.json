@@ -1,0 +1,82 @@
+{
+  "plataforma": "AM",
+  "rotulo": "misoginia",
+  "tweets": {
+    "singular": [
+      {
+        "texto": "Engraçado que a @fulana vive pregando liberdade das mulheres, mas em casa paga de empregadinha.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Essa @fulana deve ser muito ruim de cama pqp, mina mal comida só reclama dos caras que sai, problema são eles ou ela! ",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Serio que essa puta da @fulana não vai parar?! menininha sonsa do caralho.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Sem saco para essa puta da @fulana, essa biscate está conseguindo desalinhar  meus chakras.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Muito feio isso @fulana, fica fazendo menção sobre feminismo em todas as redes socias, mas quem banca tudo é o namorado não tem coragem nem de rachar a conta do lanche super independente isso.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana não dá leite, mas é uma puta vaquinha kkkkkkkk.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      }
+    ],
+    "plural": [
+      {
+        "texto": "Engraçado que @fulana @ciclana vivem pregando liberdade das mulheres, mas em casa pagam de empregadinhas.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Essas @fulana @ciclana devem ser muito ruins de cama pqp, minas mal comidas só reclamam dos caras que saem, problema são eles ou elas! ",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Serio que essas putas da @fulana @ciclana não vão parar?! menininhas sonsas do caralho.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Sem saco para essas puta da @fulana e da @ciclana, essas biscatse estão conseguindo desalinhar  meus chakras.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Muito feio isso @fulana @ciclana, ficam fazendo menção sobre feminismo em todas as redes socias, mas quem banca tudo são os namorados não têm coragem nem de racharem a conta do lanche super independentes isso.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana não dão leite, mas são umas putas vaquinhas kkkkkkkk.",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      }
+    ]
+  }
+}

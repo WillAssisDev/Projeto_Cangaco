@@ -89,9 +89,8 @@ def in_reply_to_status_id_str(usuarios_mencionados_tweet:list, probabilidade_non
   :return: nenhum ou um usuário, neste último caso, retornando o dicionário em_resposta
   """
   try:
-    if usuarios_mencionados_tweet != None:
+    if usuarios_mencionados_tweet != None and usuarios_mencionados_tweet != []:
       usuarios = [None] + usuarios_mencionados_tweet
-
       qtd_usuarios = len(usuarios_mencionados_tweet)
       prob_usuarios = (1 - probabilidade_none) / qtd_usuarios
       probabilidades = [probabilidade_none]

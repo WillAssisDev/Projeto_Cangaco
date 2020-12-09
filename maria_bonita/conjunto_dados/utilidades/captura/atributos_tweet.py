@@ -284,7 +284,7 @@ def usuario_descricao(status:tw.Status):
     te.base_exception(erro, _CAMINHO_MODULO + 'usuario_descricao')
 
 
-# URL IMAGEM PERFIL ############################################ VERIFICAR - RECEBENDO NONE
+# URL IMAGEM PERFIL
 def autor_url_imagem_perfil(status:tw.Status):
   """Função que recupera o endereço web da imagem de perfil do autor.
 
@@ -292,17 +292,13 @@ def autor_url_imagem_perfil(status:tw.Status):
   :return: string da url da imagem
   """
   try:
-    if hasattr(status, "profile_image_url"):
-      return status.author.profile_image_url_https
-
-    else:
-      return ""
+    return status.author.profile_image_url_https if hasattr(status.author, "profile_image_url_https") else ""
 
   except BaseException as erro:
     te.base_exception(erro, _CAMINHO_MODULO + 'autor_url_imagem_perfil')
 
 
-# URL IMAGEM PERFIL ############################################ VERIFICAR - RECEBENDO NONE
+# URL IMAGEM PERFIL
 def usuario_url_imagem_perfil(status:tw.Status):
   """Função que recupera o endereço web da imagem de perfil do usuário.
 
@@ -310,17 +306,13 @@ def usuario_url_imagem_perfil(status:tw.Status):
   :return: string da url da imagem
   """
   try:
-    if hasattr(status, "profile_image_url"):
-      return status.user.profile_image_url_https
-
-    else:
-      return ""
+    return status.user.profile_image_url_https if hasattr(status.user, "profile_image_url_https") else ""
 
   except BaseException as erro:
-    te.base_exception(erro, _CAMINHO_MODULO + 'autor_url_imagem_perfil')
+    te.base_exception(erro, _CAMINHO_MODULO + 'usuario_url_imagem_perfil')
 
 
-# URL IMAGEM CAPA ############################################ VERIFICAR - RECEBENDO NONE
+# URL IMAGEM CAPA
 def autor_url_imagem_capa(status: tw.Status):
   """Função que recupera o endereço web da imagem de capa do autor.
 
@@ -328,17 +320,13 @@ def autor_url_imagem_capa(status: tw.Status):
   :return: string da url da imagem
   """
   try:
-    if hasattr(status, "profile_banner_url"):
-      return status.author.profile_banner_url
-
-    else:
-      return ""
+    return status.author.profile_banner_url if hasattr(status.author, "profile_banner_url") else ""
 
   except BaseException as erro:
     te.base_exception(erro, _CAMINHO_MODULO + 'autor_url_imagem_capa')
 
 
-# URL IMAGEM CAPA ############################################ VERIFICAR - RECEBENDO NONE
+# URL IMAGEM CAPA
 def usuario_url_imagem_capa(status: tw.Status):
   """Função que recupera o endereço web da imagem de capa do usuário.
 
@@ -346,11 +334,7 @@ def usuario_url_imagem_capa(status: tw.Status):
   :return: string da url da imagem
   """
   try:
-    if hasattr(status, "profile_banner_url"):
-      return status.user.profile_banner_url
-
-    else:
-      return ""
+    return status.user.profile_banner_url if hasattr(status.user, "profile_banner_url") else ""
 
   except BaseException as erro:
     te.base_exception(erro, _CAMINHO_MODULO + 'usuario_url_imagem_capa')

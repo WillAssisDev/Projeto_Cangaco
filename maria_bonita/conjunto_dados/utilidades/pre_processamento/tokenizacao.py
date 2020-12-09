@@ -33,14 +33,16 @@ def __tratamento_remover_caractere(token:str, alvo:str):
     te.base_exception(erro, _CAMINHO_MODULO + '__tratamento_remover_caractere')
 
 
-def __tratamento_stopwords(tokens:list):
+def __tratamento_stopwords(tokens:list, vocabulario:list):
   """Função que remove stopwords da lista de tokens.
 
   :param tokens: lista de fatias processadas de um conjunto de caracteres
+  :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
   :return: lista de tokens sem as stopwords
   """
   try:
     stopwords = corpus.stopwords.words('portuguese')
+    if len(vocabulario): stopwords = [stopwords for word in stopwords if word not in vocabulario]
     return [token for token in tokens if token not in stopwords]
 
   except BaseException as erro:
@@ -65,13 +67,13 @@ def __verifica_hifen(token:str):
     te.base_exception(erro, _CAMINHO_MODULO + '__verifica_hifen')
 
 
-def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, com_stopwords:bool):
+def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, vocabulario:list):
   """ Função que recebe um tweet cru e lhe aplica os tratamentos necessários para o posterior processamento.
 
   :param tweet_texto: o texto publicado sendo processado
   :param chaves_busca: lista que contém os objetos das chaves de busca e respectivos rótulos
   :param mencionados: lista de usuários mencionados no tweet
-  :param com_stopwords: parâmetro booleano que indica se as stopwords devem ou não serem mantidas
+  :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
   :return: tweet tratado: stopwords e não alfanuméricos removidas, descapitalização e menções, números e emojis normalizados
   """
   try:
@@ -85,7 +87,7 @@ def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, com_stopword
     tweet_texto = normalizacao.simbolos_com_alfanumericos(tweet_texto)
 
     tokens = tokenize.word_tokenize(tweet_texto, 'portuguese')
-    if not com_stopwords: tokens = __tratamento_stopwords(tokens)
+    tokens = __tratamento_stopwords(tokens, vocabulario)
 
     tweet_tokens_texto = []
     for token in tokens:

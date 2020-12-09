@@ -1,0 +1,298 @@
+{
+  "plataforma": "AL",
+  "rotulo": "misoginia",
+  "tweets": {
+    "singular": [
+      {
+        "texto": "E aquela puta que deu em cima do meu namorado?",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mas a @fulana é uma putinha mesmo, bebeu todas e ficou com cinco caras na festa",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A @fulana é uma prostituta, casou com o fulano só porque ele é rico",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A faculdade tá cheia de piranha, as meninas só vão com aquelas roupas pra chamar a atenção dos homens",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Ah pronto, agora o bar @mencao_aleatoria vai começar a ser frequentado por esse bando de biscate... era só o que me faltava.",
+        "usuarios_mencionados": ["mencao_aleatoria"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A menina é uma vaca e depois vai reclamar que o cara beijou ela a força... ridícula.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A @fulana é uma vaquinha e depois vem pagar de santinha... me poupe.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "O que mais tem nessa cidade é pistoleira, cuidem dos seus namorados, meninas.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Nossa, a @fulana se acha a gostosa, a última bolacha do pacote",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "FULANA é muito gostosinha, né? Fica difícil não ficar secando...",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Tava no metrô hoje e encontrei um bando de feminazi no metrô falando sobre aborto, bando de assassina. Essa raça tinha que acabar!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "O cara ficou doído, igual uma mulherzinha. Vira macho, cara!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "E hoje que eu vi um cara chorando no restaurante igual uma menininha? Ri muito, ridículo demais.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A mulher é só uma empregada e acha que pode falar comigo naquele tom, tem gente que não se coloca no seu devido lugar.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "To ficando com uma mina gostosinha, ainda quer me agradar. Logo logo vira minha empregadinha kkkkk.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mano, mulher é muito louca mesmo, né? Será que alguma se salva? A gente não pode fazer nada que a mulher surta, tudo louca...",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A outra é uma louquinha, só quer platéia... bem típico desse tipo de mulher, vou nem me misturar.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mulher hoje é tudo maluca, a gente não pode mais elogiar na rua que é assédio... tudo maluca e mal comida.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As mina são tudo maluquinha, surta por qualquer coisa... Por isso que eu pego as mina e não me envolvo.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Só tem malucona nesses apps de paquera, as meninas ficam cheio de cu doce. Mano, se topou sair comigo porque não quer transar? Tudo doida.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A mulher do @mencao_aleatoria é desequilibrada, o cara não tem sossego. Certeza que é dessas feministas de merda, cheio de falar sobre \"respeito e liberdade da mulher\"",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Feminista é tudo perturbada, né? Começa pelo suvaco peludo... desculpa, mas isso não é normal, super nojento!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Minha chefe é super estressada, certeza que é falta de sexo. Mulher mal comida fica assim, tudo estressada.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "E aquela mal amada da Ana? Toda cheia de querer, por isso tá sozinha, ninguém aguenta mulher assim...",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      }
+    ],
+    "plural": [
+      {
+        "texto": "E aquelas putas que deram em cima do meu namorado?",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mas as @fulana @ciclana são umas putinhas mesmo, beberam todas e ficaram com cinco caras na festa",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As @fulana @ciclana são umas prostitutas, casaram com o fulanos só porque eles são ricos",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "A faculdade tá cheia de piranhas, as meninas só vão com aquelas roupas pra chamar a atenção dos homens",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Ah pronto, agora o bar @mencao_aleatoria vai começar a ser frequentado por essas biscates... era só o que me faltava.",
+        "usuarios_mencionados": ["mencao_aleatoria"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As meninas são umas vacas e depois vão reclamar que os cara beijaram elas a força... ridículas.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As @fulana @ciclana são umas vaquinhas e depois vem pagar de santinhas... me poupe.",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "O que mais tem nessa cidade são pistoleiras, cuidem dos seus namorados, meninas.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Nossa, @fulana @ciclana se acham as gostosa, as últimas bolachas do pacote",
+        "usuarios_mencionados": ["fulana", "@ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "FULANA e CICLANA são muito gostosinhas, né? Fica difícil não ficar secando...",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Tava no metrô hoje e encontrei um bando de feminazis no metrô falando sobre aborto, bando de assassina. Essa raça tinha que acabar!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Os caras ficaram doídos, igual umas mulherzinhas. Virem macho, caras!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "E hoje que eu vi uns caras chorando no restaurante iguais umas menininhas? Ri muito, ridículo demais.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As mulheres são só umas empregadas e acham que podem falar comigo naquele tom, tem gente que não se coloca no seu devido lugar.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "To ficando com umas minas gostosinhas, ainda querem me agradar. Logo logo viram minhas empregadinhas kkkkk.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mano, mulheres são muito loucas mesmo, né? Será que alguma se salva? A gente não pode fazer nada que as mulheres surtam, tudo loucas...",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As outras são uma louquinhas, só querem platéia... bem típico desse tipo de mulher, vou nem me misturar.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Mulheres hoje são tudo malucas, a gente não pode mais elogiar na rua que é assédio... tudo malucas e mal comidas.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As minas são tudo maluquinhas, surtam por qualquer coisa... Por isso que eu pego as minas e não me envolvo.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Só tem maluconas nesses apps de paquera, as meninas ficam cheio de cu doce. Mano, se topou sair comigo porque não quer transar? Tudo doidas.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "As mulheres do @mencao_aleatoria são desequilibradas, o cara não tem sossego. Certeza que são feministas de merda, cheio de falar sobre \"respeito e liberdade da mulher\"",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Feministas são tudo perturbadas, né? Começam pelos suvacos peludo... desculpa, mas isso não é normal, super nojento!",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Minhas chefes são super estressadas, certeza que é falta de sexo. Mulheres mal comidas fica assim, tudo estressadas.",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "E aquelas mal amadas @fulana @ciclana? Todas cheias de querer, por isso tão sozinhas, ninguém aguenta mulheres assim...",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      }
+    ]
+  }
+}

@@ -82,13 +82,13 @@ def relacionamento_com_respondido(em_resposta:dict):
     te.base_exception(erro, _CAMINHO_MODULO + 'relacionamento_com_respondido')
 
 
-def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, com_stopwords:bool=COM_STOPWORDS):
+def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, vocabulario:list):
   """ Função que recebe um tweet cru e lhe aplica os tratamentos necessários para o posterior processamento.
 
   :param tweet_texto: o tweet não tratado
   :param chaves_busca: lista que contém os objetos das chaves de busca e respectivos rótulos
   :param usuarios_mencionados: lista de dicionários de usuários mencionados no tweet
-  :param com_stopwords: parâmetro booleano que indica se as stopwords devem ou não serem mantidas
+  :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
   :return: tweet tratado: stopwords e não alfanuméricos removidas, descapitalização e menções, números e emojis normalizados
   """
   try:
@@ -99,20 +99,20 @@ def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, com_stopword
       if tipo_mencionados == str: mencionados = cs2s.converter_str_em_list_dict(mencionados)
       lista_screen_names = [mencao['screen_name'] for mencao in mencionados]
 
-      return tk.tokenizar(tweet_texto, chaves_busca, lista_screen_names, com_stopwords)
-    return tk.tokenizar(tweet_texto, chaves_busca, [], com_stopwords)
+      return tk.tokenizar(tweet_texto, chaves_busca, lista_screen_names, vocabulario)
+    return tk.tokenizar(tweet_texto, chaves_busca, [], vocabulario)
 
   except BaseException as erro:
     te.base_exception(erro, _CAMINHO_MODULO + 'tokenizar')
 
 
-def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_crime=None, com_stopwords:bool=COM_STOPWORDS):
+def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_crime=None, vocabulario:list=[]):
   """Função que recebe um dicionário de tweet e cria novos atributos.
 
   :param dicionario_tweet: o dicionário de um tweet
   :param chaves_busca: lista de objetos chave de busca
   :param possivel_crime: valor para indicador ou não tweet criminoso
-  :param com_stopwords: parâmetro booleano que indica se as stopwords devem ou não serem mantidas
+  :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
   :return: o dicionário do tweet, com as novas variáveis incorporadas
   """
   try:
@@ -125,7 +125,7 @@ def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_crime=Non
     dicionario_tweet['tokens'] = tokenizar(tweet_texto=dicionario_tweet['texto_original'],
                                            chaves_busca=chaves_busca,
                                            mencionados=dicionario_tweet['tweet_usuarios_mencionados'],
-                                           com_stopwords=com_stopwords)
+                                           vocabulario=vocabulario)
 
     dicionario_tweet['possivel_crime'] = possivel_crime
 

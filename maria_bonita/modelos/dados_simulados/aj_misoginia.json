@@ -1,0 +1,214 @@
+{
+  "plataforma": "AJ",
+  "rotulo": "misoginia",
+  "tweets": {
+    "singular": [
+      {
+        "texto": "@fulana, aquela empregadinha, me roubando e achando que eu não ia descobrir",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana, não merece ser estuprada. É uma louca desequilibrada",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana louquinha na festa. Peguei e vrau",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Pensa numa mulher gostosa, mas pistoleira. É a @fulana",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Empregada boa é aquela que não se faz de mulherzinha como a @fulana",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana pensando que eu sou empregada dela. Me poupe",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Seria incapaz de amar uma filha homossexual. Essa mulher perturbada como a @fulana",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Que homem não gosta de ir atrás de uma animalzinha: uma galinha, uma piranha ou até uma vaquinha",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana malcomida, só poderia virar feminazi",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana é uma puta e mal amada. Para de ir atrás de marido das outras",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana estava malucona. Minha pica foi no céu. Gosto assim, bem putinha",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana deve estar maluca de defender uma prostituta",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Ô @fulana, não vou discutir feminismo com você. Lugar de vaca é no curral",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana se fazendo de menininha e escondendo a biscate que é",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Nada como uma noite com uma gostosinha delícia @fulana",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Cidadã de bem de dia, gostosona a noite",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana estava maluquinha. Claro que queria",
+        "usuarios_mencionados": ["fulana"],
+        "hashtags": [],
+        "urls": []
+      }
+    ],
+    "plural": [
+      {
+        "texto": "@fulana @ciclana aquelas empregadinhas, me roubando e achando que eu não ia descobrir",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana não merecem serem estupradas. São umas loucas desequilibradas",
+         "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana louquinhas na festa. Peguei e vrau",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Pensa numas mulheres gostosas, mas pistoleiras. São a @fulana e a @ciclana",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Empregadas boas são aquelas que não se fazem de mulherzinhas como a @fulana e a @ciclana",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana pensando que eu sou empregada delas. Me poupe",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Seria incapaz de amar umas filhas homossexuais. Essas mulheres perturbadas como a @fulana e a @ciclana",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Que homem não gosta de ir atrás de umas animalzinhas: umas galinhas, umas piranhas ou até umas vaquinhas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana mal comidas, só poderiam virar feminazis",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana são umas putas e mal amadas. Parem de ir atrás de marido das outras",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana estavam maluconas. Minha pica foi no céu. Gosto assim, bem putinhas",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana devem estar malucas de defenderem umas prostitutas",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Ô @fulana @ciclana, não vou discutir feminismo com vocês. Lugar de vacas é no curral",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana se fazendo de menininhas e escondendo as biscates que são",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Nada como uma noite com umas gostosinhas delícias @fulana @ciclana",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Cidadãs de bem de dia, gostosonas a noite",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "@fulana @ciclana estavam maluquinham. Claro que queriam",
+        "usuarios_mencionados": ["fulana", "ciclana"],
+        "hashtags": [],
+        "urls": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "plataforma": "JV",
+  "rotulo": "misoginia",
+  "tweets": {
+    "singular": [
+      {
+        "texto": "Ela é bonita então deve ser burra",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "É puta porque usa roupa curta",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Ex é tudo louca",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Se tá de mal humor é mal comida",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      }
+    ],
+    "plural": [
+      {
+        "texto": "Elas são bonitas então devem ser burras",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "São putas porque usam roupas curtas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Ex são tudo loucas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      },
+      {
+        "texto": "Se tão de mal humor são mal comidas",
+        "usuarios_mencionados": [],
+        "hashtags": [],
+        "urls": []
+      }
+    ]
+  }
+}

@@ -12,14 +12,16 @@ _CAMINHO_MODULO = 'maria_bonita.modelos.utilidades.StatusSimulado.'
 class _Entities:
   """Classe entidades, criada somente para replicar nas simulações a mesma estrutura de dados utilizada pelo Twitter."""
 
-  def __init__(self, mencionados:list):
+  def __init__(self, mencionados:list, hashtags:list, urls:list):
     """Método construtor.
 
     :param mencionads: lista de usuários, instâncias de eu_Maria.Instancia_Conexao_API
+    :param hashtags: lista de hashtags contidas no texto simulado do tweet
+    :param urls: lista de urls externas contidas no texto simulado do tweet
     """
     try:
-      self.hashtags = []
-      self.urls = []
+      self.hashtags = hashtags
+      self.urls = urls
       self.user_mentions = mencionados
 
     except BaseException as erro:
@@ -30,13 +32,15 @@ class Status_Simulado:
   """Classe para representar a mesma estrutura de dados utilizada pelo Twitter na estruturação de um tweet."""
 
   def __init__(self, projecao_tweet:str, autor:Instancia_Conexao_API, usuario:Instancia_Conexao_API, mencionados:list,
-               plataforma:str='MB', idioma:str=IDIOMA_PADRAO):
+               hashtags:list=[], urls:list=[], plataforma:str='MB', idioma:str=IDIOMA_PADRAO):
     """Método construtor.
 
     :param projecao_tweet: o texto simulado do tweet
     :param autor: o autor simulado do tweet, instância de eu_Maria.Instancia_Conexao_API
     :param usuario: o usuário origem simulado do tweet
     :param mencionados: lista de usuários mencionados (instâncias de Instancia_Conexao_API) em projecao_tweet
+    :param hashtags: lista de hashtags contidas no texto simulado do tweet
+    :param urls: lista de urls externas contidas no texto simulado do tweet
     :param plataforma: sigla para identificar origem da simulação
     :param idioma: idioma utilizado na simulação
     """
@@ -46,7 +50,7 @@ class Status_Simulado:
       self.id =                        usuario.statuses_count
       self.id_str =                    str(self.id)
       self.text =                      projecao_tweet
-      self.entities =                  _Entities(mencionados)
+      self.entities =                  _Entities(mencionados, hashtags, urls)
       self.source =                    plataforma
       self.in_reply_to_status_id_str = simula.in_reply_to_status_id_str(mencionados)
       self.lang =                      idioma

@@ -26,12 +26,12 @@ class StreamListenerSimulado:
       te.base_exception(erro, _CAMINHO_MODULO + 'StreamListenerSimulado.__init__')
 
 
-  def on_status(self, status:Status_Simulado, chaves_busca:list, com_stopwords:bool):
+  def on_status(self, status:Status_Simulado, chaves_busca:list, vocabulario:list=[]):
     """Função que estrutura os dados da projeção de um tweet em um dicionário.
 
     :param status: uma projeção simulada na stream simulada
     :param chaves_busca: lista de objetos chave de busca
-    :param com_stopwords: booleano que indica se as stopwords ignorados no processamento (tokenização)
+    :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
     :return: o dicionário do tweet simulado
     """
     try:
@@ -87,7 +87,7 @@ class StreamListenerSimulado:
         dicionario_tweet=  dicionario_tweet,
         chaves_busca=      chaves_busca,
         possivel_crime=    _POSSIVEL_CRIME,
-        com_stopwords=     com_stopwords
+        vocabulario=       vocabulario
       )
 
       return dicionario_tweet

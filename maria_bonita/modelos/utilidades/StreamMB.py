@@ -5,7 +5,6 @@ from maria_bonita.eu_Maria import Instancia_Conexao_API
 
 
 _CAMINHO_MODULO = 'maria_bonita.modelos.utilidades.StreamMB.'
-_COM_STOPWORDS = True
 _PLATAFORMA = 'MB'
 
 
@@ -31,7 +30,7 @@ class StreamMB:
     except BaseException as erro:
       te.base_exception(erro, _CAMINHO_MODULO + 'StreamMB.__init__')
 
-  def filter_adjetivos(self, chaves_busca:list, dict_frases_projetadas:dict):
+  def filter_adjetivos(self, chaves_busca:list, dict_frases_projetadas:dict, vocabulario:list=[]):
     """Método que cria uma lista de projeções de textos, acrescentando chaves e usuários mencionados. A lista criada é
     percorrida e a informação é estruturada, sendo que, ao final de cada iteração, o dicionário da projeção é
     acrescentado na lista de dicionários de projeções do receptor da transmissão.
@@ -117,17 +116,17 @@ class StreamMB:
 
       for dict_projecoes in lista_dict_projecoes:
         status = Status_Simulado(
-          projecao_tweet=dict_projecoes['projecao'],
-          autor=dict_projecoes['autor'],
-          usuario=dict_projecoes['usuario'],
-          mencionados=dict_projecoes['mencionados'],
-          plataforma=_PLATAFORMA
+          projecao_tweet= dict_projecoes['projecao'],
+          autor=          dict_projecoes['autor'],
+          usuario=        dict_projecoes['usuario'],
+          mencionados=    dict_projecoes['mencionados'],
+          plataforma=     _PLATAFORMA
         )
 
         tweet_simulado_MB = self.listener.on_status(
-          status=status,
-          chaves_busca=chaves_busca,
-          com_stopwords=_COM_STOPWORDS
+          status=       status,
+          chaves_busca= chaves_busca,
+          vocabulario=  vocabulario
         )
 
         self.listener.lista_resultados.append(tweet_simulado_MB)
@@ -138,4 +137,5 @@ class StreamMB:
       te.base_exception(erro, _CAMINHO_MODULO + 'StreamMB.filter_adjetivos')
 
 
-__doc__ = """Módulo criado para reproduzir a mesma sequência lógica utilizada em uma captura real de dados no Twitter."""
+__doc__ = """Módulo criado para reproduzir a mesma sequência lógica utilizada em uma captura real de dados no Twitter,
+cujos os textos das projeções de tweets são gerados dinamicamente."""
