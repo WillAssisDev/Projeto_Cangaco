@@ -5,7 +5,7 @@ import maria_bonita.conjunto_dados.utilidades.captura.chaves_busca as cb
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.normalizacao.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.pre_processamento.normalizacao.'
 
 
 def chaves_busca(tweet_texto:str, chaves_busca:list):

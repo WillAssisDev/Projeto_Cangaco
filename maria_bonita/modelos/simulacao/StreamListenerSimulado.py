@@ -1,12 +1,12 @@
 import utilidades.tratamento_erros as te
-import maria_bonita.modelos.utilidades.atributos_simulados as simula
+import maria_bonita.modelos.simulacao.atributos_simulados as simula
 import maria_bonita.conjunto_dados.utilidades.pre_processamento.novas_variaveis as nv
-from maria_bonita.modelos.utilidades.StatusSimulado import Status_Simulado
+from maria_bonita.modelos.simulacao.StatusSimulado import Status_Simulado
 import maria_bonita.conjunto_dados.utilidades.captura.StreamListenerPersonalizado as slp
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.modelos.utilidades.StreamListenerSimulado.'
+_CAMINHO_MODULO = 'maria_bonita.modelos.simulacao.StreamListenerSimulado.'
 _COM_STOPWORDS = True
 _POSSIVEL_CRIME = 1
 

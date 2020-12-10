@@ -20,25 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97b84a4a-3cc8-4115-80e1-2c186c756c41" name="Default Changelist" comment="Finalizei tokenização e normalização">
-      <change afterPath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/am_misoginia.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/me_misoginia.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utilidades/caminho_projeto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/misoginia.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/misoginia.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/API_Personalizada.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/API_Personalizada.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/StreamListenerPersonalizado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/StreamListenerPersonalizado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/atributos_tweet.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/atributos_tweet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/chaves_busca.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/chaves_busca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/ferramentas_conjunto_dados.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/ferramentas_conjunto_dados.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/conversor_str_2_struct.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/conversor_str_2_struct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/normalizacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/normalizacao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/novas_variaveis.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/novas_variaveis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/tokenizacao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/eu_Maria.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/eu_Maria.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StatusSimulado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StatusSimulado.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamListenerSimulado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamListenerSimulado.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamMB.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamMB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/atributos_simulados.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/atributos_simulados.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/misoginia.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/misoginia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilidades/api_rate_limit.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/api_rate_limit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/aj_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/aj_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/al_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/al_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/am_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/am_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/jv_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/jv_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/jx_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/jx_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/md_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/md_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/dados_simulados/me_misoginia.json" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/dados/me_misoginia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StatusSimulado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/StatusSimulado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamJSON.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/StreamJSON.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamListenerSimulado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/StreamListenerSimulado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/StreamMB.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/StreamMB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/atributos_simulados.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/atributos_simulados.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/misoginia.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/misoginia.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilidades/autenticacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/autenticacao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilidades/caminho_projeto.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/caminho_projeto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilidades/formatar_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/formatar_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilidades/tratamento_erros.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/tratamento_erros.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,15 +78,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\modelos\simulacao" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\conjunto_dados\utilidades\pre_processamento" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\conjunto_dados\utilidades\captura" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\dataset\utilidades" />
-      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\dataset" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades" />
     </key>
   </component>
   <component name="RunManager" selected="Python.rascunhos">
@@ -258,38 +267,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606047600519" />
-    <state width="1899" height="255" key="GridCell.Tab.0.bottom" timestamp="1607551309804">
+    <state width="1899" height="255" key="GridCell.Tab.0.bottom" timestamp="1607639793155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.0.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551309804" />
-    <state width="1899" height="255" key="GridCell.Tab.0.center" timestamp="1607551309804">
+    <state width="1899" height="255" key="GridCell.Tab.0.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639793155" />
+    <state width="1899" height="255" key="GridCell.Tab.0.center" timestamp="1607639793154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.0.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551309804" />
-    <state width="1899" height="255" key="GridCell.Tab.0.left" timestamp="1607551309804">
+    <state width="1899" height="255" key="GridCell.Tab.0.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639793154" />
+    <state width="1899" height="255" key="GridCell.Tab.0.left" timestamp="1607639793154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.0.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551309804" />
-    <state width="1899" height="255" key="GridCell.Tab.0.right" timestamp="1607551309804">
+    <state width="1899" height="255" key="GridCell.Tab.0.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639793154" />
+    <state width="1899" height="255" key="GridCell.Tab.0.right" timestamp="1607639793155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.0.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551309804" />
-    <state width="1899" height="255" key="GridCell.Tab.1.bottom" timestamp="1607551325960">
+    <state width="1899" height="255" key="GridCell.Tab.0.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639793155" />
+    <state width="1899" height="255" key="GridCell.Tab.1.bottom" timestamp="1607639794081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.1.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551325960" />
-    <state width="1899" height="255" key="GridCell.Tab.1.center" timestamp="1607551325960">
+    <state width="1899" height="255" key="GridCell.Tab.1.bottom/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639794081" />
+    <state width="1899" height="255" key="GridCell.Tab.1.center" timestamp="1607639794080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.1.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551325960" />
-    <state width="1899" height="255" key="GridCell.Tab.1.left" timestamp="1607551325960">
+    <state width="1899" height="255" key="GridCell.Tab.1.center/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639794080" />
+    <state width="1899" height="255" key="GridCell.Tab.1.left" timestamp="1607639794080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.1.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551325960" />
-    <state width="1899" height="255" key="GridCell.Tab.1.right" timestamp="1607551325960">
+    <state width="1899" height="255" key="GridCell.Tab.1.left/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639794080" />
+    <state width="1899" height="255" key="GridCell.Tab.1.right" timestamp="1607639794081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="255" key="GridCell.Tab.1.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607551325960" />
+    <state width="1899" height="255" key="GridCell.Tab.1.right/-1366.-134.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607639794081" />
     <state x="469" y="164" key="SettingsEditor" timestamp="1606435123018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -327,9 +336,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/rascunhos.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="102" />
+          <line>10</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rascunhos.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

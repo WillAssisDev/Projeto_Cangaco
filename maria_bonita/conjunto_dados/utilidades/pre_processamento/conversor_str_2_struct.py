@@ -1,7 +1,7 @@
 import utilidades.tratamento_erros as te
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_struct.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.pre_processamento.conversor_str_2_struct.'
 
 
 def converter_str_em_list_dict(string:str):

@@ -1,11 +1,11 @@
 import json
 import utilidades.tratamento_erros as te
-from maria_bonita.modelos.utilidades.StatusSimulado import Status_Simulado
-from maria_bonita.modelos.utilidades.StreamListenerSimulado import StreamListenerSimulado
+from maria_bonita.modelos.simulacao.StatusSimulado import Status_Simulado
+from maria_bonita.modelos.simulacao.StreamListenerSimulado import StreamListenerSimulado
 from maria_bonita.eu_Maria import Instancia_Conexao_API
 
 
-_CAMINHO_MODULO = 'maria_bonita.modelos.utilidades.StreamJSON.'
+_CAMINHO_MODULO = 'maria_bonita.modelos.simulacao.StreamJSON.'
 
 
 class StreamJSON:

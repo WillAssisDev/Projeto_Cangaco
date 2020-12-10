@@ -6,7 +6,7 @@ import maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.novas_variaveis.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.pre_processamento.novas_variaveis.'
 COM_STOPWORDS = True
 
 

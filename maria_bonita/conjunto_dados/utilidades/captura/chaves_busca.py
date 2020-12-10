@@ -2,7 +2,7 @@ import utilidades.tratamento_erros as te
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.chaves_busca.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.captura.chaves_busca.'
 
 
 class Chave_Busca:

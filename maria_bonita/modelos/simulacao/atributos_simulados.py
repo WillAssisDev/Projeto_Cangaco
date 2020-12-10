@@ -6,7 +6,7 @@ from maria_bonita.conjunto_dados.utilidades.captura.atributos_tweet import URL_R
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.utilidades.modelos.utilidades.atributos_simulados.'
+_CAMINHO_MODULO = 'maria_bonita.simulacao.modelos.simulacao.atributos_simulados.'
 _OPCOES_RETWEET = (True, False)
 _PROBABILIDADES_RETWEET = (0.8, 0.2)
 _OPCOES_RELACIONAMENTO = (NAO_RELACIONADOS, SEGUINDO)

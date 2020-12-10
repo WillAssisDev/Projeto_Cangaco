@@ -4,7 +4,7 @@ import maria_bonita.conjunto_dados.utilidades.captura.atributos_tweet as at
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.StreamListenerPersonalizado.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.captura.StreamListenerPersonalizado.'
 
 
 def antevisao_tweets_capturados(status:tw.Status):

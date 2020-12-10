@@ -3,7 +3,7 @@ import utilidades.tratamento_erros as te
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'utilidades.caminho_projeto.'
+_CAMINHO_MODULO = 'simulacao.caminho_projeto.'
 
 
 def __caminho_projeto():

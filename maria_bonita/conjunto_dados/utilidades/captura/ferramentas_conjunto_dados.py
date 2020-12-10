@@ -7,7 +7,7 @@ import maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.captura.ferramentas_conjunto_dados.'
 
 # parametrização
 QUANTIDADE_TWEETS = 2000

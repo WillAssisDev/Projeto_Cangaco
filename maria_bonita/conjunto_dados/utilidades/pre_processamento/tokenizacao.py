@@ -5,7 +5,7 @@ import maria_bonita.conjunto_dados.utilidades.pre_processamento.normalizacao as 
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.tokenizacao.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.pre_processamento.tokenizacao.'
 
 
 def __tratamento_remover_caractere(token:str, alvo:str):

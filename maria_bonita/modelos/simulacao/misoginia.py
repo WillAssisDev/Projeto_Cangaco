@@ -1,9 +1,9 @@
 import json
 from nltk import tokenize
 from maria_bonita.conjunto_dados.utilidades.captura.chaves_busca import MISOGINIA
-import maria_bonita.modelos.utilidades.StreamMB as sMB
-import maria_bonita.modelos.utilidades.StreamJSON as sJSON
-import maria_bonita.modelos.utilidades.StreamListenerSimulado as slp
+import maria_bonita.modelos.simulacao.StreamMB as sMB
+import maria_bonita.modelos.simulacao.StreamJSON as sJSON
+import maria_bonita.modelos.simulacao.StreamListenerSimulado as slp
 import utilidades.tratamento_erros as te
 from maria_bonita.eu_Maria import MB, MJ, JN, ALEATORIO
 from utilidades.caminho_projeto import CAMINHO_PROJETO
@@ -11,7 +11,7 @@ from maria_bonita.conjunto_dados.utilidades.pre_processamento.normalizacao impor
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.modelos.utilidades.misoginia.'
+_CAMINHO_MODULO = 'maria_bonita.modelos.simulacao.misoginia.'
 _CHAVES_BUSCA = (MISOGINIA)
 _MENCIONADAS = [MB, MJ]
 _MISOGINO = JN
@@ -21,7 +21,7 @@ _PROJECOES_ADJETIVOS = {
 }
 
 __NOMES_ARQUIVOS_JSON = ['aj', 'al', 'am', 'jv', 'jx', 'me', 'md']
-__CAMINHO_ARQUIVOS_JSON = CAMINHO_PROJETO + 'maria_bonita/modelos/dados_simulados/'
+__CAMINHO_ARQUIVOS_JSON = CAMINHO_PROJETO + 'maria_bonita/modelos/simulacao/dados/'
 _ARQUIVOS_JSON = [__CAMINHO_ARQUIVOS_JSON + nome_arquivo + '_misoginia.json' for nome_arquivo in __NOMES_ARQUIVOS_JSON]
 _CHAVES_MENCOES = ['fulana', 'ciclana', 'mencao_aleatoria']
 
@@ -49,7 +49,7 @@ def projecoes(chaves_busca:list=_CHAVES_BUSCA):
     stream_misoginia.filter_adjetivos(
       chaves_busca=chaves_busca,
       dict_frases_projetadas=_PROJECOES_ADJETIVOS,
-      vocabulario=_VOCABULARIO
+      vocabulario=VOCABULARIO
     )
 
     stream_misoginia_2 = sJSON.StreamJSON(
@@ -65,7 +65,7 @@ def projecoes(chaves_busca:list=_CHAVES_BUSCA):
       chaves_busca=chaves_busca,
       chaves_mencoes=_CHAVES_MENCOES,
       lista_arquivos_json=_ARQUIVOS_JSON,
-      vocabulario=_VOCABULARIO
+      vocabulario=VOCABULARIO
     )
 
     return lista_tweets
@@ -98,7 +98,7 @@ def __vocabulario_misoginia():
   return list(set(MISOGINIA.lista_chaves + projecoes_adjetivos + projecoes))
 
 
-_VOCABULARIO = __vocabulario_misoginia()
+VOCABULARIO = __vocabulario_misoginia()
 
 
 __doc__ = """Módulo para criação de uma lista com tweets misóginos."""

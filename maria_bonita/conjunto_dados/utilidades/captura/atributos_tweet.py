@@ -5,7 +5,7 @@ import demoji
 
 
 #CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.atributos_tweet.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.captura.atributos_tweet.'
 URL_RAIZ = 'https://twitter.com/'
 SEP_DEMOJI = '§'
 

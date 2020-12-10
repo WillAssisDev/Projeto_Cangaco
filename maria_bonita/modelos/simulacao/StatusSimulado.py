@@ -1,12 +1,12 @@
 import utilidades.tratamento_erros as te
 from utilidades.formatar_data import formatar as data
 from maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados import IDIOMA_PADRAO
-import maria_bonita.modelos.utilidades.atributos_simulados as simula
+import maria_bonita.modelos.simulacao.atributos_simulados as simula
 from maria_bonita.eu_Maria import Instancia_Conexao_API
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.modelos.utilidades.StatusSimulado.'
+_CAMINHO_MODULO = 'maria_bonita.modelos.simulacao.StatusSimulado.'
 
 
 class _Entities:

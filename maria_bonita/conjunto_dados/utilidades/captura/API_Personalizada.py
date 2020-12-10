@@ -6,7 +6,7 @@ import utilidades.tratamento_erros as te
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.captura.APIPersonalizada.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.captura.APIPersonalizada.'
 
 PAUSA_API = 900
 LIMITE_FICTICIO_API = 150

@@ -5,7 +5,7 @@ from utilidades.caminho_projeto import CAMINHO_PROJETO
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'utilidades.autenticacao.'
+_CAMINHO_MODULO = 'simulacao.autenticacao.'
 
 
 def autenticar(chaves_twitter:str='chaves_twitter_NAO_VERSIONAR.json'):
