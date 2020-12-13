@@ -45,9 +45,10 @@ class Word2VecPersonalizado:
       self.__pln = spacy.load(name_spacy,
                               disable=['parser', 'ner', 'tagger', 'textcat'])
 
-      lista_doc = [doc.text for doc in self.__pln.pipe(dados,
+      lista_doc = [doc.text for doc in self.__pln.pipe(dados.dropna(),
                                                        batch_size=1000,
                                                        n_process=1)]
+
       conjunto_tweets = pd.DataFrame({"tweet_texto": lista_doc}).dropna().drop_duplicates()
 
       self.log = log
@@ -154,7 +155,7 @@ class ClassificadorW2V:
       self.__perc_treino, self.__perc_teste = perc_treino, perc_teste
       random_state = _RANDOM_STATE if random_state_fixo else None
       self.__x_treino, self.__x_teste, \
-      self.__y_treino, self.__y_teste = train_test_split(textos_base, alvo_base,
+      self.__y_treino, self.__y_teste = train_test_split(textos_base.dropna(), alvo_base.dropna(),
                                                          train_size=perc_treino,
                                                          test_size=perc_teste,
                                                          random_state=random_state)
@@ -203,7 +204,7 @@ class ClassificadorW2V:
         for n in range(qtd_linhas - 1):
           matriz[n] = self.__combinacao_vetores_por_soma(grupo_textos.iloc[n])
 
-        matrizes.append(matriz)
+        if matriz.any(): matrizes.append(matriz)
 
       return matrizes
 

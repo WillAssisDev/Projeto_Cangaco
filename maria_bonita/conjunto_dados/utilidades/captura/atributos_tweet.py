@@ -1,7 +1,6 @@
 import tweepy as tw
 import utilidades.tratamento_erros as te
 import demoji
-# demoji.download_codes()
 
 
 #CONSTANTES
