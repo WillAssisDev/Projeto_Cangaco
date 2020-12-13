@@ -5,7 +5,6 @@ from utilidades import autenticacao
 from utilidades.formatar_data import formatar as data
 
 
-
 # CONSTANTES
 _CAMINHO_MODULO = 'maria_bonita.eu_Maria.'
 
