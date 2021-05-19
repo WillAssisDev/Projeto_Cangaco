@@ -1,7 +1,7 @@
 import utilidades.tratamento_erros as te
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.pre_processamento.conversor_str_2_struct.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.conversor_str_2_struct.'
 
 
 def converter_str_em_list_dict(string:str):
@@ -15,6 +15,7 @@ def converter_str_em_list_dict(string:str):
     if string != '[]':
       dicionario = {}
       for item in string.strip("][}{").replace("'", "").split(", "):
+        item = item.replace("}", "").replace("{", "")
         dicionario[item[:item.find(':')]] = item[item.find(':') + 2:]
       lista.append(dicionario)
     return lista

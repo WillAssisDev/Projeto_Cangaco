@@ -1,0 +1,6 @@
+{
+  "databaseConfigConfig": {
+    "host": "mySql",
+    "database": "projeto_cangaco"
+  }
+}

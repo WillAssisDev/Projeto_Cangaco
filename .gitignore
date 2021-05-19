@@ -129,7 +129,10 @@ dmypy.json
 .pyre/
 
 *.csv
-chaves_twitter_NAO_VERSIONAR.json
+configuracoes/chaves_twitter_NAO_VERSIONAR.json
+docker/token.txt
 rascunhos.py
 rascunhos.ipynb
 log_de_erros.txt
+mariadb/
+!mariadb/projeto_cangaco/

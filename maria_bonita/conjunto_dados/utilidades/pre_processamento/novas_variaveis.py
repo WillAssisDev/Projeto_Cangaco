@@ -6,7 +6,7 @@ import maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.simulacao.pre_processamento.novas_variaveis.'
+_CAMINHO_MODULO = 'maria_bonita.conjunto_dados.utilidades.pre_processamento.novas_variaveis.'
 COM_STOPWORDS = True
 
 
@@ -106,12 +106,12 @@ def tokenizar(tweet_texto:str, chaves_busca:list, mencionados:list, vocabulario:
     te.base_exception(erro, _CAMINHO_MODULO + 'tokenizar')
 
 
-def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_crime=None, vocabulario:list=[]):
+def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_infracao=None, vocabulario:list=[]):
   """Função que recebe um dicionário de tweet e cria novos atributos.
 
   :param dicionario_tweet: o dicionário de um tweet
   :param chaves_busca: lista de objetos chave de busca
-  :param possivel_crime: valor para indicador ou não tweet criminoso
+  :param possivel_infracao: valor para indicador ou não tweet criminoso
   :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
   :return: o dicionário do tweet, com as novas variáveis incorporadas
   """
@@ -127,7 +127,7 @@ def novas_variaveis(dicionario_tweet:dict, chaves_busca:list, possivel_crime=Non
                                            mencionados=dicionario_tweet['tweet_usuarios_mencionados'],
                                            vocabulario=vocabulario)
 
-    dicionario_tweet['possivel_crime'] = possivel_crime
+    dicionario_tweet['possivel_infracao'] = possivel_infracao
 
     return dicionario_tweet
 

@@ -1,0 +1,5 @@
+tweepy==3.9.0
+gensim==3.8.3
+spacy==2.3.5
+demoji==0.4.0
+mariadb==1.0.5

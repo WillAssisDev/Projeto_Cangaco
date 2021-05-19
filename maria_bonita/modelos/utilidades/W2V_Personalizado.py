@@ -10,6 +10,8 @@ from sklearn.metrics import classification_report
 import pickle
 from utilidades.caminho_projeto import CAMINHO_PROJETO
 import utilidades.tratamento_erros as te
+import maria_bonita.conjunto_dados.utilidades.pre_processamento.novas_variaveis as nv
+import maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados as fcd
 
 
 # CONSTANTES
@@ -213,7 +215,7 @@ class ClassificadorW2V:
 
   def __classificador(self, x_treino:pd.Series, x_teste:pd.Series, y_treino:pd.Series, y_teste:pd.Series,
                       mostra_relatorio:bool):
-    """Função privada que cria o classificador e elabora o relatório da acuária do mesmo.
+    """Função privada que cria o classificador e elabora o relatório da acurácia do mesmo.
 
     :param x_treino: variáveis independentes para treinamento do modelo
     :param y_treino: váriáveis dependentes, objetivas pela previsão, utilizadas no treinamento
@@ -236,6 +238,24 @@ class ClassificadorW2V:
     except BaseException as erro:
       te.base_exception(erro, _CAMINHO_MODULO + 'ClassificadorW2V.__classificador')
 
+  def __classificar(self, texto:str, chaves_busca:list, mencionados:list, vocabulario:list=[]):
+    """Função privada que recebe um tweet não tratado e avalia se incorreu crime de ódio
+
+    :param tweet_texto: o tweet não tratado
+    :param chaves_busca: lista que contém os objetos das chaves de busca e respectivos rótulos
+    :param mencionados: lista de dicionários de usuários mencionados no tweet
+    :param vocabulario: lista com o vocabulario, para forçar que stopwords presentes não sejam removidas
+    :return: inteiro 0 ou 1
+    """
+    try:
+      texto = nv.tokenizar(texto, chaves_busca, mencionados, vocabulario)
+      vetor = self.__combinacao_vetores_por_soma(texto)
+
+      return self._classificador.predict(vetor)[0]
+
+    except BaseException as erro:
+      te.base_exception(erro, _CAMINHO_MODULO + 'ClassificadorW2V.__classificar')
+
   def exportar(self, nome_arquivo:str='rl', caminho_saida:str=CAMINHO_SAIDA_MODELO):
     """Método que consolida o modelo obtido em um arquivo Pickle, possibilitando sua utilização em outros contextos.
 
@@ -253,6 +273,50 @@ class ClassificadorW2V:
 
     except BaseException as erro:
       te.base_exception(erro, _CAMINHO_MODULO + 'ClassificadorW2V.exportar')
+
+  def avaliacao(self, API, tweet, chaves_busca:list):
+    """Função que avalia se um tweet pode ter incorrido em crime de ódio e o relaciomento entre os usuários envolvidos
+
+    :param tweet_texto: o tweet não tratado
+    :param chaves_busca: lista que contém os objetos das chaves de busca e respectivos rótulos
+    :param mencionados: lista de dicionários de usuários mencionados no tweet):
+    """
+    rotulos = ''
+    for chave in chaves_busca:
+      if rotulos == '':
+        rotulos += chave.rotulo.upper()
+      else:
+        rotulos += ', ' + chave.rotulo.upper()
+
+    resultado = f'*** AVALIAÇÃO {rotulos} ***' + \
+                f'\nTWEET: {tweet["tweet_texto"]}'
+
+    possivel_infracao = 'Atenção, foi reconhecido possível crime de ódio!' if self.__classificar(tweet["tweet_texto"],
+      chaves_busca, tweet["tweet_usuarios_mencionados"]) else 'Tudo bem, não foi reconhecido possível crime de ódio.'
+
+    resultado += f'\nRESULTADO: {possivel_infracao}'
+
+    relacionamentos = ''
+    if tweet["tweet_usuarios_mencionados"] != []:
+      tweet['tweet_usuarios_mencionados'] = fcd.relacionamento_com_mencionados(API,
+                                                                               tweet['usuario_id'],
+                                                                               tweet['tweet_usuarios_mencionados'],
+                                                                               False)
+
+      for relacionamento in nv.relacionamento_com_mencionados(tweet["tweet_usuarios_mencionados"]):
+        if not relacionamentos:
+          relacionamentos = ' - ' + relacionamento['usuario'] + ': ' + relacionamento['relacionamento']
+        else:
+          relacionamentos = '\n - ' + relacionamento['usuario'] + ': ' + relacionamento['relacionamento']
+
+    qtd_mencionados = len(tweet["tweet_usuarios_mencionados"])
+    if qtd_mencionados == 1:
+      resultado += f'\nRELACIONAMENTO: {relacionamentos}'
+    elif qtd_mencionados > 1:
+      resultado += f'\nRELACIONAMENTOS:\n' + \
+                   f'{relacionamentos}'
+
+    return resultado
 
 
 __doc__ = """Módulo com recursos para criação e disponibilização de modelo word embedding, utilizando Word2Vec, e para

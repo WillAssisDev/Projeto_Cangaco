@@ -1,6 +1,7 @@
 import tweepy as tw
 import utilidades.tratamento_erros as te
 import maria_bonita.conjunto_dados.utilidades.captura.atributos_tweet as at
+from maria_bonita.conjunto_dados.utilidades.captura.ferramentas_conjunto_dados import filtro_chaves_busca
 
 
 # CONSTANTES
@@ -84,16 +85,18 @@ def consolidar_dados(**kwargs):
 class StreamListenerPersonalizado(tw.StreamListener):
   """Classe que sobrescreve a transmissão de dados do end-point do Twitter."""
 
-  def __init__(self, lista_resultados:list, quantidade_tweets:int, com_retweets:bool):
+  def __init__(self, lista_resultados:list, chaves_busca:list, quantidade_tweets:int, com_retweets:bool):
     """Método construtor.
 
     :param lista_resultados: estrutura de dados que recebe o resultado de toda captura
+    :param chaves_busca: lista com as chaves de busca para filtrar a captura de tweets
     :param quantidade_tweets: limite de tweets a serem capturados
     :param com_retweets: indicador se retweets deverão ser capturados
     """
     try:
       tw.StreamListener.__init__(self)
       self.lista_resultados = lista_resultados
+      self.chaves_busca = chaves_busca
       self.quantidade_tweets = quantidade_tweets
       self.com_retweets = com_retweets
 
@@ -116,66 +119,69 @@ class StreamListenerPersonalizado(tw.StreamListener):
       if captura:
         quantidade_capturados = len(self.lista_resultados) + 1
         atingiu_quantidade_tweets = quantidade_capturados >= self.quantidade_tweets
+
         if not atingiu_quantidade_tweets:
-          # cabeçalho
-          print(quantidade_capturados, (72 - len(str(quantidade_capturados))) * '-')
-
-          antevisao_tweets_capturados(status)
-
           tem_extended_tweet = hasattr(status, "extended_tweet")
+          tweet_texto = at.tweet_texto(status, tem_extended_tweet)
 
-          dicionario_tweet = consolidar_dados(
-            # TWEET
-            criado_em=status.created_at,
-            retweet=status.text.startswith('RT'),
-            tweet_id=status.id_str,
-            tweet_url=at.tweet_url(status),
-            tweet_texto=at.tweet_texto(status, tem_extended_tweet),
-            tweet_hashtags=at.tweet_hashtags(status, tem_extended_tweet),
-            tweet_urls_externos=at.tweet_urls_externos(status, tem_extended_tweet),
-            tweet_usuarios_mencionados=at.tweet_usuarios_mencionados(status, tem_extended_tweet),
-            tweet_plataforma_origem=status.source[12:],
-            tweet_em_resposta=at.tweet_em_resposta(status),
-            tweet_idioma=status.lang,
-            tweet_json=status._json,
+          if filtro_chaves_busca(tweet_texto, self.chaves_busca):
+            # cabeçalho
+            print(quantidade_capturados, (72 - len(str(quantidade_capturados))) * '-')
 
-            # AUTOR
-            autor_nome=at.autor_nome(status),
-            autor_screen_name=status.author.screen_name,
-            autor_id=status.author.id_str,
-            autor_url=at.autor_url(status),
-            autor_verificado=status.author.verified,
-            autor_localizacao=status.author.location,
-            autor_descricao=at.autor_descricao(status),
-            autor_qtd_seguidores=status.author.followers_count,
-            autor_qtd_amigos=status.author.friends_count,
-            autor_qtd_tweets=status.author.statuses_count,
-            autor_url_imagem_perfil=at.autor_url_imagem_perfil(status),
-            autor_url_imagem_capa=at.autor_url_imagem_capa(status),
-            autor_criado_em=status.author.created_at,
-            autor_json=status.author._json,
+            antevisao_tweets_capturados(status)
 
-            # USUÁRIO
-            usuario_nome=at.usuario_nome(status),
-            usuario_screen_name=status.user.screen_name,
-            usuario_id=status.user.id_str,
-            usuario_url=at.usuario_url(status),
-            usuario_verificado=status.user.verified,
-            usuario_localizacao=status.user.location,
-            usuario_descricao=at.usuario_descricao(status),
-            usuario_qtd_seguidores=status.user.followers_count,
-            usuario_qtd_amigos=status.user.friends_count,
-            usuario_qtd_tweets=status.user.statuses_count,
-            usuario_url_imagem_perfil=at.usuario_url_imagem_perfil(status),
-            usuario_url_imagem_capa=at.usuario_url_imagem_capa(status),
-            usuario_criado_em=status.user.created_at,
-            usuario_json=status.user._json
-          )
+            dicionario_tweet = consolidar_dados(
+              # TWEET
+              criado_em=status.created_at,
+              retweet=status.text.startswith('RT'),
+              tweet_id=status.id_str,
+              tweet_url=at.tweet_url(status),
+              tweet_texto=tweet_texto,
+              tweet_hashtags=at.tweet_hashtags(status, tem_extended_tweet),
+              tweet_urls_externos=at.tweet_urls_externos(status, tem_extended_tweet),
+              tweet_usuarios_mencionados=at.tweet_usuarios_mencionados(status, tem_extended_tweet),
+              tweet_plataforma_origem=status.source[12:],
+              tweet_em_resposta=at.tweet_em_resposta(status),
+              tweet_idioma=status.lang,
+              tweet_json=status._json,
 
-          self.lista_resultados.append(dicionario_tweet)
+              # AUTOR
+              autor_nome=at.autor_nome(status),
+              autor_screen_name=status.author.screen_name,
+              autor_id=status.author.id_str,
+              autor_url=at.autor_url(status),
+              autor_verificado=status.author.verified,
+              autor_localizacao=status.author.location,
+              autor_descricao=at.autor_descricao(status),
+              autor_qtd_seguidores=status.author.followers_count,
+              autor_qtd_amigos=status.author.friends_count,
+              autor_qtd_tweets=status.author.statuses_count,
+              autor_url_imagem_perfil=at.autor_url_imagem_perfil(status),
+              autor_url_imagem_capa=at.autor_url_imagem_capa(status),
+              autor_criado_em=status.author.created_at,
+              autor_json=status.author._json,
 
-          # rodapé
-          print(72 * '-', end='\n\n')
+              # USUÁRIO
+              usuario_nome=at.usuario_nome(status),
+              usuario_screen_name=status.user.screen_name,
+              usuario_id=status.user.id_str,
+              usuario_url=at.usuario_url(status),
+              usuario_verificado=status.user.verified,
+              usuario_localizacao=status.user.location,
+              usuario_descricao=at.usuario_descricao(status),
+              usuario_qtd_seguidores=status.user.followers_count,
+              usuario_qtd_amigos=status.user.friends_count,
+              usuario_qtd_tweets=status.user.statuses_count,
+              usuario_url_imagem_perfil=at.usuario_url_imagem_perfil(status),
+              usuario_url_imagem_capa=at.usuario_url_imagem_capa(status),
+              usuario_criado_em=status.user.created_at,
+              usuario_json=status.user._json
+            )
+
+            self.lista_resultados.append(dicionario_tweet)
+
+            # rodapé
+            print(72 * '-', end='\n\n')
 
         else:
           return

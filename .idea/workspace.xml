@@ -20,13 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97b84a4a-3cc8-4115-80e1-2c186c756c41" name="Default Changelist" comment="Finalizei tokenização e normalização">
-      <change afterPath="$PROJECT_DIR$/utilidades/downloads_libs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuracoes/configuracoes,json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/anaconda.dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/cheat_sheet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mariadb.dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/requirements-downloads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/url_notebook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilidades/cursor_mariadb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilidades/iniciar.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/projeto_cangaco.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projeto_cangaco.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/antigo/versao1.1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/antigo/versao1.1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/misoginia.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/misoginia.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/atributos_tweet.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/atributos_tweet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/StreamListenerPersonalizado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/StreamListenerPersonalizado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/ferramentas_conjunto_dados.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/ferramentas_conjunto_dados.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/conversor_str_2_struct.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/conversor_str_2_struct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/novas_variaveis.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/pre_processamento/novas_variaveis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/Word2Vec_misoginia.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/Word2Vec_misoginia.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/StreamListenerSimulado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/simulacao/StreamListenerSimulado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py" beforeDir="false" afterPath="$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilidades/autenticacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/autenticacao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilidades/caminho_projeto.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilidades/caminho_projeto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilidades/downloads_libs.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +61,17 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -50,25 +82,57 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/docker-compose.yml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\docker" />
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\configuracoes" />
+      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\docker" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\modelos\simulacao" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades" />
       <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\conjunto_dados\utilidades\pre_processamento" />
-      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\conjunto_dados\utilidades\captura" />
-      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\dataset\utilidades" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.rascunhos">
+  <component name="RunManager" selected="Python.tweet">
+    <configuration name="W2V_Personalizado" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/modelos/utilidades" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="api_rate_limit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projeto_cangaco" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +145,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilidades/api_rate_limit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -90,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="downloads_libs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="atributos_tweet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projeto_cangaco" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,53 +163,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilidades" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\utilidades\downloads_libs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="eu_Maria" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projeto_cangaco" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\will\Google Drive\workspace\Projetos\projeto_cangaco\maria_bonita\eu_Maria.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="misoginia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projeto_cangaco" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/modelos/utilidades" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maria_bonita/modelos/utilidades/misoginia.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura/atributos_tweet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,7 +189,30 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rascunhos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tweet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projeto_cangaco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maria_bonita/sample" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maria_bonita/sample/tweet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,11 +223,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tweet" />
         <item itemvalue="Python.rascunhos" />
-        <item itemvalue="Python.downloads_libs" />
-        <item itemvalue="Python.misoginia" />
+        <item itemvalue="Python.atributos_tweet" />
+        <item itemvalue="Python.W2V_Personalizado" />
         <item itemvalue="Python.api_rate_limit" />
-        <item itemvalue="Python.eu_Maria" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +242,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601826680242</updated>
+      <workItem from="1608328977771" duration="2325000" />
+      <workItem from="1608331657453" duration="94000" />
+      <workItem from="1608460874791" duration="18119000" />
+      <workItem from="1608544537490" duration="4918000" />
+      <workItem from="1608627303926" duration="6179000" />
+      <workItem from="1608805933303" duration="2498000" />
+      <workItem from="1608900776966" duration="6477000" />
+      <workItem from="1608987333407" duration="5886000" />
+      <workItem from="1610285071276" duration="689000" />
+      <workItem from="1610793778337" duration="6618000" />
+      <workItem from="1611181710964" duration="142000" />
+      <workItem from="1611181973110" duration="2311000" />
+      <workItem from="1611495170577" duration="3238000" />
+      <workItem from="1614019924237" duration="226000" />
+      <workItem from="1616505023391" duration="5350000" />
+      <workItem from="1616585083512" duration="9762000" />
+      <workItem from="1616697906945" duration="4388000" />
+      <workItem from="1620576377443" duration="2574000" />
+      <workItem from="1620590619869" duration="4127000" />
+      <workItem from="1621082686213" duration="3157000" />
+      <workItem from="1621092903609" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizei tokenização e normalização">
       <created>1606430812477</created>
@@ -205,6 +273,12 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -227,25 +301,34 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
+          <line>58</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py</url>
-          <line>162</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/utilidades/cursor_mariadb.py</url>
+          <line>99</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/rascunhos.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/maria_bonita/modelos/utilidades/W2V_Personalizado.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="14" />
+          <line>53</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="resultado" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/requirements_downloads_py$atributos_tweet.coverage" NAME="atributos_tweet Coverage Results" MODIFIED="1616507509343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maria_bonita/conjunto_dados/utilidades/captura" />
+    <SUITE FILE_PATH="coverage/projeto_cangaco$cursor_mariadb.coverage" NAME="cursor_mariadb Coverage Results" MODIFIED="1608806108328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilidades" />
+    <SUITE FILE_PATH="coverage/projeto_cangaco$api_rate_limit.coverage" NAME="api_rate_limit Coverage Results" MODIFIED="1608988432156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilidades" />
+    <SUITE FILE_PATH="coverage/tweet_py$tweet.coverage" NAME="tweet Coverage Results" MODIFIED="1620586118353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maria_bonita/sample" />
+    <SUITE FILE_PATH="coverage/projeto_cangaco$rascunhos.coverage" NAME="rascunhos Coverage Results" MODIFIED="1608991093201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/requirements_downloads_py$W2V_Personalizado.coverage" NAME="W2V_Personalizado Coverage Results" MODIFIED="1616507347862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maria_bonita/modelos/utilidades" />
+    <SUITE FILE_PATH="coverage/requirements_downloads_py$rascunhos.coverage" NAME="rascunhos Coverage Results" MODIFIED="1616700311638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

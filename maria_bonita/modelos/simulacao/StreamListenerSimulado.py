@@ -86,7 +86,7 @@ class StreamListenerSimulado:
       nv.novas_variaveis(
         dicionario_tweet=  dicionario_tweet,
         chaves_busca=      chaves_busca,
-        possivel_crime=    _POSSIVEL_CRIME,
+        possivel_infracao=    _POSSIVEL_CRIME,
         vocabulario=       vocabulario
       )
 

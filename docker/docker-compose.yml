@@ -1,0 +1,39 @@
+version: "3.7"
+
+networks:
+  rede:
+    driver: bridge
+
+services:
+#  mariadb:
+##    build:
+##      dockerfile: ./mariadb.dockerfile
+##      context: .
+##    image: wilsonassisdev/mariadb
+#    image: library/mariadb:10.5
+#    container_name: mariadb
+#    environment:
+#      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+##      MYSQL_ROOT_PASSWORD: root_projeto_cangaco_89
+#    ports:
+#      - 3306:3306
+#    networks:
+#      - rede
+#    volumes:
+#      - ../mariadb:/var/lib/mysql
+
+  anaconda:
+    build:
+      dockerfile: ./anaconda.dockerfile
+      context: .
+    image: wilsonassisdev/anaconda
+    container_name: anaconda
+    ports:
+      - 8888:8888
+    networks:
+      - rede
+#    depends_on:
+#      - "mariadb"
+    command: jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
+    volumes:
+      - ../.:/projeto_cangaco

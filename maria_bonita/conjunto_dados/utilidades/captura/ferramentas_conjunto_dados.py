@@ -53,7 +53,7 @@ def parametros(chaves_busca:list=(chaves_busca.LISTA_GERAL), quantidade_tweets:i
     te.base_exception(erro, _CAMINHO_MODULO + 'parametros')
 
 
-def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str):
+def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str, mostra_utilizacao:bool):
   """Função privada para estabelecer o relacionamento entre o usuário origem e o usuário alvo. Se a propriedade PRODUCAO
   do objeto API for TRUE, é realizada conexão no end-point do Twitter para estabelecer o relacionmaneto. Se a
   propriedade for FALSE, é realizada uma simulação através do módulo RANDOM.
@@ -61,6 +61,7 @@ def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str
   :param API: a instância da API criada
   :param usuario_id_origem: ID do usuário que publicou
   :param usuario_id_alvo: ID do usuário mencionado ou respondido
+  :param mostra_utilizacao: booleano que indica se será impresso disponibilidade da API
   :return: A API, com taxa limite atualizada e o ID correspondente ao relacionamento entre os usuários origem e alvo
   """
   relacionamento = INDEFINIDO
@@ -93,7 +94,8 @@ def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str
 
       API.contabiliza_acessos_recursos([ap.Application, ap.FriendshipShow])
 
-      print("\nChamadas API:", API.status_acessos)
+      if mostra_utilizacao:
+        print("\nChamadas API:", API.status_acessos)
 
     else:
       API = API.reset_API()
@@ -110,12 +112,13 @@ def __relacionar_usuarios(API:ap.API, usuario_id_origem:str, usuario_id_alvo:str
     return ap.API(), relacionamento
 
 
-def relacionamento_com_mencionados(API:ap.API, usuario_id_origem:str, mencionados:list):
+def relacionamento_com_mencionados(API:ap.API, usuario_id_origem:str, mencionados:list, mostra_utilizacao:bool=True):
   """Função que recebe os usuários mencionados e estabele o relacionamento entre eles e o usuário que publicou.
 
   :param API: a instância da API criada
   :param usuario_id_origem: ID do usuário que publicou
   :param mencionados: lista de dicionários de usuários mencionados
+  :param mostra_utilizacao: booleano que indica se será impresso disponibilidade da API
   :return: lista de dicionários dos usuários mencionadas, agora com o ID do relacionamento com o usuário origem
   """
   try:
@@ -125,7 +128,7 @@ def relacionamento_com_mencionados(API:ap.API, usuario_id_origem:str, mencionado
       if tipo_mencionados == str: mencionados = cs2s.converter_str_em_list_dict(mencionados)
 
       for mencao in mencionados:
-        API, mencao['relacionamento'] = __relacionar_usuarios(API, usuario_id_origem, mencao['id_str'])
+        API, mencao['relacionamento'] = __relacionar_usuarios(API, usuario_id_origem, mencao['id_str'], mostra_utilizacao)
 
     return mencionados
 
@@ -145,7 +148,6 @@ def relacionamento_com_respondido(API:ap.API, usuario_id_origem:str, mencionados
   :param em_resposta: dicionário do usuário respondido
   :return: lista de dicionários dos usuários mencionadas, agora com o ID do relacionamento com o usuário origem
   """
-
   try:
     nao_esta_vazio = not isna(em_resposta)
     if nao_esta_vazio:
@@ -170,6 +172,22 @@ def relacionamento_com_respondido(API:ap.API, usuario_id_origem:str, mencionados
     te.base_exception(erro, _CAMINHO_MODULO + 'relacionamento_com_respondido')
     em_resposta['relacionamento'] = INDEFINIDO
     return em_resposta
+
+
+def filtro_chaves_busca(tweet_texto:str, chaves_busca:list):
+  """Função que verifica se no tweet estão contidas as chaves de busca designadas para captura.
+
+  :param tweet_texto: o tweet que foi publicado
+  :param chaves_busca: a lista de chaves de busca
+  :return: bool que representa a existência ou não de chave de busca no corpo do tweet
+  """
+  palavras = tweet_texto.lower().split()
+
+  for chave_busca in chaves_busca:
+    for chave in chave_busca.lista_chaves:
+      for palavra in palavras:
+        if chave == palavra: return True
+  return False
 
 
 __doc__ = """Módulo com recursos para a parametrização do conjunto de dados e conclusão de captura."""

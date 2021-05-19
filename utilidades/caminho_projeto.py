@@ -18,9 +18,16 @@ def __caminho_projeto():
       caminho = '/content/drive/My Drive/workspace/Projetos/projeto_cangaco/'
 
     else:
-      caminho = os.getcwd().replace('\\', r'/')
-      fim = caminho.find('projeto_cangaco') + len('projeto_cangaco')
-      caminho = caminho[:fim] + '/'
+      if os.name == 'nt':
+        caminho = os.getcwd().replace('\\', r'/')
+        fim = caminho.find('projeto_cangaco') + len('projeto_cangaco')
+        caminho = caminho[:fim] + '/'
+
+      elif os.name == 'posix':
+        if 'ipykernel' in modules:
+          caminho = '/projeto_cangaco/'
+        else:
+          caminho = '/opt/project/'
 
     return caminho
 

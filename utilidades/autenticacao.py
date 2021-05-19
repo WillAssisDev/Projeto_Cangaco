@@ -5,10 +5,10 @@ from utilidades.caminho_projeto import CAMINHO_PROJETO
 
 
 # CONSTANTES
-_CAMINHO_MODULO = 'simulacao.autenticacao.'
+_CAMINHO_MODULO = 'utilidades.autenticacao.'
 
 
-def autenticar(chaves_twitter:str='chaves_twitter_NAO_VERSIONAR.json'):
+def autenticar(chaves_twitter:str='configuracoes/chaves_twitter_NAO_VERSIONAR.json'):
   """Método que acessa localmente as credenciais de acesso ao end-point do Twitter e produz um autenticador.
 
   :param caminho_chaves_twitter: caminho do .json que contém as credenciais
